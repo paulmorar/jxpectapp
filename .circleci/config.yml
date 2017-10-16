@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  bulid:
+    working_directory: ~/tmp
+    docker:
+      - image: circle/node:7
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
